@@ -1,0 +1,9 @@
+Sau khi deploy Render xong, bạn sẽ có BACKEND_URL, ví dụ:
+https://unite-poster-backend.onrender.com
+
+Gửi BACKEND_URL này cho ChatGPT để tạo bản frontend v5.
+
+Frontend v5 sẽ thay:
+- Xóa nền browser → gọi POST {BACKEND_URL}/api/remove-bg
+- Auto-fit browser → gọi POST {BACKEND_URL}/api/auto-fit-person
+- Export canvas local → gọi POST {BACKEND_URL}/api/render-poster nếu muốn render server-side

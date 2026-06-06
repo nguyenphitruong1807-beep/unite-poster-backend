@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: unite-poster-backend
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_NAME
+        value: Unite Poster Backend
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: PORT
+        value: "8080"
+      - key: SUPABASE_URL
+        value: https://kclwqffwkxraryunmssd.supabase.co
+      - key: SUPABASE_ANON_KEY
+        value: sb_publishable_uoozzSc1UTJEpCxZbJ1Ndw_7M6QZP2x
+      - key: SUPABASE_BUCKET
+        value: poster-assets
+      - key: AUTO_UPLOAD_OUTPUTS
+        value: "true"
+      - key: JOB_LOGGING_ENABLED
+        value: "true"
+      - key: REQUIRE_AUTH_FOR_MUTATIONS
+        value: "false"
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
